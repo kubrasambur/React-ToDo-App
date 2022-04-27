@@ -2,6 +2,57 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[Patika.dev](https://app.patika.dev/) Project assignment I developed to reinforce what I learned in React Native trainings.
+
+## Features
+- Adding and listing todos.
+- Strikes through the to-do item when marked as completed.
+- the number of all todos, active todos and completed todos are displayed next to the buttons.
+- completed todos and all todos can be deleted
+- entered todos are stored in local storage
+
+## Özellikler
+- yapılacaklar ekleniyor ve listeleniyor
+- yapıldı olarak işaretlenenlerin üstü çiziliyor
+- tüm yapılacakarın, aktif olanların ve tamamlananların sayısı butonların yanında yazıyor
+- tamamlanan yapılacaklar ve tüm yapılacaklar silinebilir.
+- girilen yapılacaklar yerel saklama alanında tutuluyor.
+
+## Images
+<img src="src/img/Ekran görüntüsü 2022-04-27 092154.jpg" height="400" width="450"><img/>
+<img src="src/img/Ekran görüntüsü 2022-04-27 092214.jpg" height="400" width="450"><img/>
+<img src="src/img/Ekran görüntüsü 2022-04-27 092312.jpg" height="400" width="450"><img/>
+
+## Installation
+Clone this repository on your local machine.
+
+```
+git clone https://github.com/kubrasambur/react-todo.git
+```
+
+## Usage
+To use it after cloning the project:
+```
+cd react-todo
+cd .
+```
+Run the following commands in the project folder to install the project dependencies.
+
+```
+npm init
+npm install
+```
+These instructions will get a copy of the project up and running on your local machine for development and testing purposes.
+
+## To Run the Application
+In the project directory you can run:
+
+```
+npm start
+```
+## For More Information
+You can review the [React](https://reactjs.org/) documentation.
+
 ## Available Scripts
 
 In the project directory, you can run:
