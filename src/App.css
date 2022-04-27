@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  background: rgb(168, 38, 38);
+  margin:5% 40%;
+  padding: 30px 30px;
+  width: 22%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+
+}
+.delete-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.all-active-completed{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.active{
+  padding: 0px 44px;  
+}
+.clear-all{
+  padding-left:30px;
+}
+.clear-completed{
+  padding-right: 0px 30px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0px 30px 30px 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.input_container{
+  margin-bottom: 15px;
+  padding-right: 45px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input{
+  margin:5%;
+  padding:3%;
+  min-width: 290px;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 40px
+}
+.completed{
+  display: flex;
+  align-items: baseline;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: rgb(143, 135, 135);
+  flex-direction: column;
+  text-decoration: line-through;
+  font-style: oblique;
+  
+}
+.froms{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  align-items: baseline;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  font-style: inherit;
+}
+
+.css-m87n3i-MuiPaper-root-MuiCard-root {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  overflow: hidden;
+  min-width: 275px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-left: 10px;
 }

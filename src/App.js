@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Addlist from "./components/AddList/Addlist";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import CardComponent from "./components/List/CardComponent";
+
+const localList = [];
+
+for (let i = 0; i < localStorage.length; i++) {
+  localList.push({
+    text: localStorage.key(i),
+    done: JSON.parse(localStorage.getItem(localStorage.key(i))),
+  });
+}
 
 function App() {
+  const [tasks, setTasks] = useState(localList);
+
+  const [shower, setShower] = useState("All");
+
+  const filtered = (shower) => {
+    if (shower === "All") {
+      return tasks;
+    } else if (shower === "Active") {
+      return tasks.filter((task) => task.done === false);
+    } else {
+      return tasks.filter((task) => task.done !== false);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Addlist task={tasks} setTask={setTasks} />
+      <CardComponent todos={tasks} shower={shower} filter={filtered} setTask={setTasks} />
+      <Footer setShower={setShower} tasks={tasks} setTask={setTasks} />
     </div>
   );
 }
